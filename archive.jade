@@ -1,0 +1,11 @@
+extends base.jade
+
+block content
+	.content: .list_with_title
+		entries = get_data(type='post',limit=300, sort='desc').group('-date:year')
+		for year, posts in entries
+			div.listing_title= year
+			.listing: for post in posts: .listing-item
+				.listing_post
+					a(href=post.url, title=post.title)= post.title
+					div.post_date: span.date= post.date("%m-%d")

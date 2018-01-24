@@ -1,0 +1,61 @@
+html
+	+h.i18n('Home', '首页', 'zh_cn')
+	+h.i18n('Categories', '分类', 'zh_cn')
+	+h.i18n('Archive', '归档', 'zh_cn')
+	+h.i18n('Tags', '标签', 'zh_cn')
+	+h.i18n('About', '关于', 'zh_cn')
+	+h.i18n('RSS', '订阅', 'zh_cn')
+	+h.i18n('Links', '友链', 'zh_cn')
+
+	head(lang="zh")
+		+h.headers
+
+		block title
+			title= post.title or site.title
+
+
+
+		+h.load('markdown')
+		+h.load('/template/static/style.scss')
+		+h.load('/template/static/jquery.js')
+		+h.load('/template/static/basic.js')
+
+	body
+
+		.header
+			.logo_title
+				.title.animated.fadeInDown
+
+					img(src='http://7xrasx.com1.z0.glb.clouddn.com/bitcron-icon.png')
+
+					h1.weaklink(title="也而的博客")
+						a(href="/") {{ site.title }}
+
+					.navbar.weaklink
+						.normal_nav
+							+site.just_nav
+						.hamberger
+							i.fa.fa-bars
+							i.fa.fa-times
+			.hidden_nav.animated.fadeInDown
+				+site.just_nav			
+
+		.main
+			.main-inner
+				block content
+
+			if post.metadata.layout == 'post'
+				include sidebar
+
+
+		.footer
+			+footer()
+				.mysocials
+					+site.socials
+
+				.copyright
+					span © 2016 - 2017 {{site.title}} | Powered by
+						a(href="https://bitcron.com/?s=f", target="_blank") Bitcron
+
+		+h.load('font')
+		+h.back_to_top('△')

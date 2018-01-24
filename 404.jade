@@ -1,0 +1,16 @@
+extends base.jade
+
+block content
+	.content
+		.four_o_four
+			h2= '404'
+			p= '没找到网页？地址变了吧 ×_×<br/>去<a herf="/archive" class="weaklink">「归档」</a>里翻翻，或者看看下面这些最新的文章吧。'
+			span= '-------'
+				
+
+		.list_with_title
+			posts = get_data(type='post',limit=5, sort='desc')
+			.listing: for post in posts: .listing-item
+				.listing_post
+					a(href=post.url, title=post.title)= post.title
+					div.post_date: span.date= post.date("%m-%d")

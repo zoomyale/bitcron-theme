@@ -1,0 +1,12 @@
+//- aside#sidebar.sidebar
+//-     if post.metadata.autotoc
+//-         section.post-toc-wrap.motion-element.sidebar-panel.sidebar-panel-active
+//-             .post-toc
+//-                 if post.toc
+//-                     toc = post.toc
+//-                     toc = toc.replace('<ul>', '<ol class="nav">')
+//-                     toc = toc.replace('</ul>', '</ol>')
+//-                     toc = toc.replace('<li>', '<li class="nav-item">')
+//-                     .post-toc-content= toc
+//-                 else
+//-                     p.post-toc-empty= '此文章未包含目录'
