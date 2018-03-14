@@ -500,6 +500,11 @@ a {
 		padding-right: 0.3em;
 	}
 
+	h3::before {
+		content: '\A';
+		white-space: pre;
+	}
+
 	h4 {
 		color: #444;
 		font-size: 1em;
