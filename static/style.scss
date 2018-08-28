@@ -488,6 +488,7 @@ a {
 		margin-left: -0.1em;
 		display: inline;
 		padding-right: 0.3em;
+		line-height: 2;
 	}
 
 	h3 {
@@ -498,6 +499,7 @@ a {
 		margin-left: -0.1em;
 		display: inline;
 		padding-right: 0.3em;
+		line-height: 2;
 	}
 
 	h3::before {
@@ -508,6 +510,7 @@ a {
 	h4 {
 		color: #444;
 		font-size: 1em;
+		line-height: 2;
 	}
 
 	code {
