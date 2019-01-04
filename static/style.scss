@@ -384,23 +384,25 @@ a {
 	.copyright {
 
 		padding: 3.5em 0 0.5em;
+		color: #a1a1a1;
 
-		span {
-			color: #d6d6d6;
-		}
-		
-		a {
-			color: #d6d6d6 !important;
-			margin-left: 3px !important;
-			border: none !important;
+		div {
 
-			&:hover, &:active {
-				color: #333 !important;
-				text-decoration: none !important;
-				border: none !important;
+			span {
+				color: #e1e1e1
+			}
+
+			a {
+				color: #d6d6d6;
+				border: none;
+	
+				&:hover, &:active {
+					color: #333;
+					text-decoration: none;
+					border: none;
+				}
 			}
 		}
-
 	}
 	
 
@@ -484,7 +486,7 @@ a {
 		color: #444;
 		font-size: 1.4em;
 		border-image: url('https://i.loli.net/2018/10/01/5bb0fd8197c74.png') 0 100 0 0;
-		border-right: 1.4em solid;
+		border-right: 1.33em solid;
 		margin-left: -0.1em;
 		display: inline;
 		padding-right: 0.28em;
@@ -495,7 +497,7 @@ a {
 		color: #444;
 		font-size: 1.2em;
 		border-image: url('https://i.loli.net/2018/10/01/5bb0fe403b964.png') 0 100 0 0;
-		border-right: 1.4em solid;
+		border-right: 1.33em solid;
 		margin-left: -0.1em;
 		display: inline;
 		padding-right: 0.28em;
